@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sakinala Charan</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            background: linear-gradient(155deg, #090989, #12a8b2, #db3b41);
+            background-size: 300% 300%;
+            animation: gradient-animation 8s infinite ease-in-out;
+            color: #fff;
+        }
+
+        /* Animated Gradient Background */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 100%;
+            }
+            50% {
+                background-position: 100% 0%;
+            }
+            100% {
+                background-position: 0% 100%;
+            }
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #111;
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1; /* Ensures it appears above the animation */
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #ff5e57;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar nav ul li a {
+            color: #aaa;
+            font-size: 18px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .sidebar nav ul li a i {
+            margin-right: 10px;
+        }
+
+        .sidebar nav ul li a:hover {
+            color: #57ff6d;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 20px;
+            margin-left: 270px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .contact-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .contact-details li {
+            font-size: 18px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .contact-details li i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 24px;
+            color: #ff5e57;
+        }
+
+        /* Floating Particles Animation */
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: float 5s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+            50% {
+                transform: translateY(-50px) translateX(50px) scale(1.2);
+            }
+            100% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+        }
+
+        .particle:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-duration: 4s;
+        }
+
+        .particle:nth-child(2) {
+            top: 30%;
+            left: 50%;
+            animation-duration: 5s;
+        }
+
+        .particle:nth-child(3) {
+            top: 70%;
+            left: 30%;
+            animation-duration: 6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="profile_pic.jpg" width="150px" height="150px" alt="Logo" style="border-radius: 50%; object-fit: cover;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="projects.html"><i class="fas fa-list"></i>Projects</a></li>
+                <li><a href="skills.html"><i class="fas fa-code"></i>Skills</a></li>
+                <li><a href="contact.html" class="active"><i class="material-icons">&#xe7fe;</i>Connect</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <ul class="contact-details">
+            <li><i class="fas fa-envelope"></i> <span>Email:</span> charansakinala07@gmail.com</li>
+            <li><i class="fas fa-phone"></i> <span>Phone:</span> +91 9908336083</li>
+            <li><i class="fab fa-linkedin"></i> <span>LinkedIn:</span> <a href="https://www.linkedin.com/in/charan-sakinala-707432291/" target="_blank">linkedin.com/in/charan-sakinala</a></li>
+            <li><i class="fab fa-github"></i> <span>GitHub:</span> <a href="https://github.com/Charan01227" target="_blank">github.com/Charan01227</a></li>
+        </ul>
+        <!-- Floating Particles -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </section>
+</body>
+</html>
